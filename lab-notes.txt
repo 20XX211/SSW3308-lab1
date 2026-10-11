@@ -1,0 +1,65 @@
+Lab 1: Hypertext Markup Language
+Project: Campus Events Portal
+
+1. Browser Used
+Microsoft Edge
+
+2. Project Structure
+The project contains the following files and folders:
+- index.html
+- images/upm-notice.jpg
+- lab01-html/ (the original project folder, including the original image copy)
+- lab-notes.txt
+
+GitHub Pages is configured to publish from the main branch and the repository root folder.
+
+3. Problems Encountered and Solutions
+
+Problem 1: The UPM notice image did not display in the local webpage.
+Solution:
+I checked the image file name and its location. I made sure that the image path in the HTML matched the actual file name and folder. After correcting the path and file extension, the image displayed correctly.
+
+Problem 2: GitHub Pages showed a 404 File not found page.
+Solution:
+I checked the repository structure and found that index.html was inside the lab01-html folder, while GitHub Pages was configured to publish from the repository root. GitHub Pages could not find index.html at the expected location. I created an index.html file in the repository root and committed the changes to the main branch.
+
+Problem 3: The image did not display on the published GitHub Pages website.
+Solution:
+I confirmed that the image was uploaded to the repository. I checked the image URL and found that the published image URL returned a 404 error, even though the image could be previewed in the repository. To make the path simpler, I uploaded a copy of upm-notice.jpg to the images folder in the repository root. I then updated the image element in the root index.html to use:
+./images/upm-notice.jpg
+After committing the changes and refreshing the website, the webpage and image displayed correctly.
+
+Problem 4: The internal jump link did not work.
+Solution:
+I checked that the link's href value matched the id of the section it should jump to. An internal link should use a fragment such as href="#featured-events", and the destination section should have the matching id="featured-events". The href and id values must match exactly. I tested the link again after checking the matching values.
+
+Problem 5: The external university link did not open correctly.
+Solution:
+I checked the URL used in the anchor element and replaced it with the official UPM website URL:
+https://upm.edu.my/?LANG=en
+I then tested the link in the browser.
+
+4. HTML Validation
+Validator: W3C HTML Validator
+Website: https://validator.w3.org/
+
+Actual validation result:
+The W3C HTML Validator reported no errors.
+
+Errors corrected:
+No HTML validation errors were reported, so no validator errors needed to be corrected.
+
+5. Difference Between an HTML Tag and an HTML Element
+An HTML tag is markup written inside angle brackets, such as <p> or </p >.
+An HTML element includes the opening tag, the content, and the closing tag.
+
+Example:
+<p>Welcome to our campus.</p >
+
+In this example, <p> is the opening tag, </p > is the closing tag, and the complete paragraph markup and its content form the paragraph element.
+
+6. HTML Attribute
+An HTML attribute provides extra information about an HTML element. For example, href specifies the destination of a link, src specifies the location of an image, and alt provides alternative text for an image.
+
+7. Reflection
+During this lab, I learned how to create a basic HTML webpage, use headings and paragraphs, add links, and display an image with a relative path. I also learned that file names, file extensions, and folder locations must match the paths used in HTML. When publishing a website with GitHub Pages, index.html must be in the configured publishing directory. Checking the repository structure, reviewing paths, and testing links helped me identify and solve the problems.
